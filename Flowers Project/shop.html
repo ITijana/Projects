@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styleShop.css">
+</head>
+
+<body>
+    <aside>
+        <h4>Choose flowers:</h4><br>
+        <input type="number" min = 0 name="rose" id="rose" placeholder="The price per flower is 150 RSD"> Roses <br><br>
+        <input type="number" min = 0 name="tulip" id="tulip" placeholder="The price per flower is 120 RSD"> Tulips <br><br>
+        <input type="number" min = 0 name="lily" id="lily" placeholder="The price per flower is 70 RSD"> Lilies
+        <br><br>
+
+        <h4>Additional gift:</h4><br>
+        <input type="checkbox" name="candy" id="candy"> Box of chocolates
+        <input type="checkbox" name="choco" id="choco"> Chocolate
+        <input type="checkbox" name="champ" id="champ"> Champagne
+        <br><br>
+
+        <h4>Payment:</h4><br>
+        <input type="radio" name="payment" id="cash"> Cash
+        <input type="radio" name="payment" id="card"> Card
+        <br><br>
+
+        <input type="button" value="Calculate" id="calculate">
+        <input type="reset" value="Reset" id="reset">
+        <br><br>
+
+        <h4>Your order:</h4>
+        
+        <span id="giftOne"></span><br>
+        <span id="giftTwo"></span><br>
+        <span id="giftThree"></span><br>
+        
+        <span id="paragraph"></span><br>
+        <span id="paragraphDiscount"></span>
+    </aside>
+
+    <div>
+        <p id="imagesRose"></p><br>
+        <p id="imagesTulip"></p><br>
+        <p id="imagesLily"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
