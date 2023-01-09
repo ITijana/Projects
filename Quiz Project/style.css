@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgba(255, 255, 255, 0.708);
+    background-image: url("1.jpg");
+    background-size: auto;
+}
+
+#btnAns,
+#btnQuest {
+    border: 1px solid rgb(96, 96, 170);
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-style: italic;
+    background-color: rgb(96, 96, 170);
+    color: white;
+}
+
+#btnAns {
+    margin-left: 630px;
+    margin-right: 20px;
+}
+
+#header4 {
+    margin: 20px;
+    width: 500px;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 5px;
+    background-size: cover;
+    color: rgb(46, 44, 44);
+    font-size: 15px;
+    font-style: italic;
+}
+
+#radioButton {
+    margin: 0 10px 0 20px;
+    cursor: pointer;
+}
+
+div {
+    margin: 0 450px 0 450px;
+    background-color: rgb(96, 96, 170);
+    border-radius: 50px;
+    padding: 5px 0 20px 25px;
+}
+
+#correct,
+#notCorrect {
+    text-align: center;
+}
