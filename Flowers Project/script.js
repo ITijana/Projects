@@ -23,7 +23,7 @@ let spanTulip = document.getElementById('imagesTulip');
 let spanLily = document.getElementById('imagesLily');
 
 btnCalculate.addEventListener("click", () => {
-    let ukupno = (inputRose.value * 150 + inputTulip.value * 120 + inputLily.value * 70);
+    let total = (inputRose.value * 150 + inputTulip.value * 120 + inputLily.value * 70);
     for (let i = 1; i <= inputRose.value; i++) {
         spanRose.innerHTML += `<img class="flower" src = "photos/roses.jpg">`;
     }
@@ -33,32 +33,25 @@ btnCalculate.addEventListener("click", () => {
     for (let i = 1; i <= inputLily.value; i++) {
         spanLily.innerHTML += `<img class="flower" src = "photos/lily.jpg">`;
     }
-    inputCandy.forEach(candy => {
-        if (candy.checked) {
-            spanGiftOne.innerHTML = '+ Box of chocolates';
-            ukupno += 500;
-        }
-    });
-    inputChoco.forEach(choco => {
-        if (choco.checked) {
-            spanGiftTwo.innerHTML = '+ Chocolate';
-            ukupno += 500;
-        }
-    });
-    inputChamp.forEach(champ => {
-        if (champ.checked) {
-            spanGifThree.innerHTML = '+ Champagne';
-            ukupno += 500;
-        }
-    });
-
-    let ukupnoPopust = ukupno - (ukupno * 0.1);
-    if (radioCard.checked && ukupno > 2000) {
-        spanParagraph.innerHTML = `The price without discount is: ${ukupno} RSD`;
-        spanDiscount.innerHTML = `The price with discount is: ${ukupnoPopust} RSD`;
+    if (candy.checked) {
+        spanGiftOne.innerHTML = '+ Box of chocolates';
+        total += 500;
+    }
+    if (choco.checked) {
+        spanGiftTwo.innerHTML = '+ Chocolate';
+        total += 500;
+    }
+    if (champ.checked) {
+        spanGifThree.innerHTML = '+ Champagne';
+        total += 500;
+    }
+    let totalDiscount = total - (total * 0.1);
+    if (radioCard.checked && total > 2000) {
+        spanParagraph.innerHTML = `The price without discount is: ${total} RSD`;
+        spanDiscount.innerHTML = `The price with discount is: ${totalDiscount} RSD`;
     }
     else {
-        spanParagraph.innerHTML = `Price without discount is: ${ukupno} RSD`;
+        spanParagraph.innerHTML = `Price without discount is: ${total} RSD`;
     }
     btnCalculate.disabled = true;
 
