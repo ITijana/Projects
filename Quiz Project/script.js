@@ -60,6 +60,11 @@ let questionTen = {
 
 let quiz = [questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix, questionSeven, questionEight, questionNine, questionTen];
 
+for (let i = quiz.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [quiz[i], quiz[j]] = [quiz[j], quiz[i]];
+}
+
 let questionAndAnswers = quiz => {
     let div = document.getElementById("div");
     div.innerHTML = "";
