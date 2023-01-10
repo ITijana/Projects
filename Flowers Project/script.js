@@ -45,7 +45,7 @@ btnCalculate.addEventListener("click", () => {
         spanGifThree.innerHTML = '+ Champagne';
         total += 500;
     }
-    let totalDiscount = total - (total * 0.1);
+    let totalDiscount = total * 0.9;
     if (radioCard.checked && total > 2000) {
         spanParagraph.innerHTML = `The price without discount is: ${total} RSD`;
         spanDiscount.innerHTML = `The price with discount is: ${totalDiscount} RSD`;
